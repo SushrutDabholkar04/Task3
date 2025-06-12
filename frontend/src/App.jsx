@@ -13,6 +13,7 @@ import WhyChooseUsPage from './pages/WhyChooseUsPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CheckoutPage from './pages/CheckoutPage';
+import OtpSender from './components/OtpSender';
 // Import useAuthContext to check user's login status
 import { useAuthContext } from './hooks/useAuthContext'; 
 
@@ -45,7 +46,7 @@ function App() {
             path="/products" 
             element={user ? <ProductsPage /> : <Navigate to="/login" />} 
           />
-      
+          <Route path="/send-otp" element={<OtpSender />} /> 
           <Route 
             path="/contact" 
             element={user ? <ContactUsPage /> : <Navigate to="/login" />} 
